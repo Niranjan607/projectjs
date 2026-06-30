@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="lang"></html>
+<head>
+    <title> Welcome to Stackly</title>
+</head>
+<body>
+    <script>
+      1.  /*
+let age = Number(prompt("Enter Employee Age:"));
+let idAvailable = prompt("Is Employee ID Available? (true/false):") === "true";
+let attendance = Number(prompt("Enter Attendance Percentage:"));
+
+// Check access
+if (age >= 18 && idAvailable && attendance >= 75) {
+    console.log("Access Granted");
+} else {
+    console.log("Access Denied");
+}        */
+      2.  /*
+let marks = 67;
+
+if (marks >= 90 && marks <= 100) {
+    console.log("Grade A+");
+} else if (marks >= 80 && marks <= 89) {
+    console.log("Grade A");
+} else if (marks >= 70 && marks <= 79) {
+    console.log("Grade B");
+} else if (marks >= 60 && marks <= 69) {
+    console.log("Grade C");
+} else {
+    console.log("Fail");
+}       
+       */
+      3.    /*
+// Variables
+let balance = 8000;
+let withdraw = 3000;
+
+// Check conditions
+if (withdraw <= balance && withdraw % 100 === 0) {
+    balance = balance - withdraw;
+    console.log("Transaction Successful");
+    console.log("Remaining Balance: " + balance);
+} else {
+    console.log("Transaction Failed");
+}         */
+
+     4.   /*
+    // Variable
+let choice = 4;
+
+// Switch statement
+switch (choice) {
+    case 1:
+        console.log("You Ordered Pizza");
+        break;
+
+    case 2:
+        console.log("You Ordered Burger");
+        break;
+
+    case 3:
+        console.log("You Ordered Shawarma");
+        break;
+
+    case 4:
+        console.log("You Ordered Biryani");
+        break;
+
+    case 5:
+        console.log("You Ordered Juice");
+        break;
+
+    default:
+        console.log("Invalid Choice");
+} 
+         */
+      5.  /*
+        // Variables
+let purchase = 6000;
+let premiumUser = true;
+let discount = 0;
+let finalPrice;
+
+// Check discount
+if (purchase > 5000 && premiumUser) {
+    discount = purchase * 0.20; // 20% discount
+} else {
+    discount = purchase * 0.10; // 10% discount
+}
+
+// Calculate final price
+finalPrice = purchase - discount;
+
+// Display
+console.log("Original Price: " + purchase);
+console.log("Discount: " + discount);
+console.log("Final Price: " + finalPrice);
+      */
+  6.   /*
+     // Print attendance for 30 days
+for (let day = 1; day <= 30; day++) {
+    console.log("Day " + day + " Present");
+}
+     */
+   7. /*
+    // Print even numbers from 2 to 100
+for (let i = 3; i <= 100; i++) {
+    if (i % 2 === 0) {
+        console.log(i);
+    }
+} 
+     */
+   8. /*
+    // Variable
+let mobile = "9876543210";
+
+// Check if the mobile number is valid
+if (
+    mobile.length === 10 &&
+    (mobile.startsWith("6") ||
+     mobile.startsWith("7") ||
+     mobile.startsWith("8") ||
+     mobile.startsWith("9"))
+) {
+    console.log("Valid Mobile Number");
+} else {
+    console.log("Invalid Mobile Number");
+} 
+     */
+  9.  /*
+    // Array
+let cart = ["Milk", "Bread", "Egg", "Rice", "Oil"];
+
+// Print details
+console.log("First Item: " + cart[0]);
+console.log("Last Item: " + cart[cart.length - 1]);
+console.log("Total Items: " + cart.length);
+      */
+     // Object
+     10.  /*
+let employee = {
+    name: "Mani",
+    salary: 50000,
+    department: "IT",
+    experience: 7
+};
+
+// Print required details
+console.log("Employee Name: " + employee.name);
+console.log("Department: " + employee.department);
+console.log("Experience: " + employee.experience + " years");
+      */
+      11.  /*
+     // Inputs
+let name = "Nandha";
+let id = 1045;
+let department = "Development";
+
+// Output using template literals
+console.log(`Welcome ${name}`);
+console.log(`Your Employee ID is EMP${id}`);
+console.log(`Department : ${department}`);
+          */
+           12.  /*
+// Input using prompt()
+let name = prompt("Enter Name:");
+let age = Number(prompt("Enter Age:"));
+
+// Confirmation using confirm()
+let termsAccepted = confirm("Do you accept Terms?");
+
+// Flow condition
+if (name && age && termsAccepted) {
+    alert("Registered Successfully");
+} else {
+    alert("Registration Failed");
+}
+    */
+   13.  /*
+   // Input
+let salary = 35000;
+let incrementPercent = 15;
+
+// Calculations
+let incrementAmount = (salary * incrementPercent) / 100;
+let newSalary = salary + incrementAmount;
+
+// Output
+console.log("Old Salary: " + salary);
+console.log("Increment Amount: " + incrementAmount);
+console.log("New Salary: " + newSalary);
+    */
+      14.  /*
+
+   // Prices
+let burger = 150;
+let pizza = 300;
+let juice = 80;
+
+// Subtotal calculation
+let subtotal = burger + pizza + juice;
+
+// GST calculation (18%)
+let gst = subtotal * 0.18;
+
+// Grand total
+let grandTotal = subtotal + gst;
+
+// Output
+console.log("Subtotal: " + subtotal);
+console.log("GST (18%): " + gst);
+console.log("Grand Total: " + grandTotal);
+         */
+        
+// Object (Employee Attendance)
+let employees = {
+    Rahul: "Present",
+    Arun: "Absent",
+    Kamal: "Present",
+    Priya: "Present",
+    Divya: "Absent"
+};
+
+// Counters
+let presentCount = 0;
+let absentCount = 0;
+
+// Print lists
+console.log("Present Employees:");
+console.log("-------------------");
+
+for (let name in employees) {
+    if (employees[name] === "Present") {
+        console.log(name);
+        presentCount++;
+    }
+}
+
+console.log("\nAbsent Employees:");
+console.log("------------------");
+
+for (let name in employees) {
+    if (employees[name] === "Absent") {
+        console.log(name);
+        absentCount++;
+    }
+}
+
+// Totals
+console.log("\nTotal Present: " + presentCount);
+console.log("Total Absent: " + absentCount);
+</script>
+
+</body>
