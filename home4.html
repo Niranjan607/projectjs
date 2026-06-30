@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="lang"></html>
+<head>
+    <title> Welcome to java Script</title>
+</head>
+<body>
+    <script>
+// Employee Database (Object inside Array)
+let employees = [
+    { id: 101, name: "Rahul", status: "Present", salary: 30000, experience: 2 },
+    { id: 102, name: "Arun", status: "Absent", salary: 35000, experience: 5 },
+    { id: 103, name: "Kamal", status: "Present", salary: 40000, experience: 3 },
+    { id: 104, name: "Priya", status: "Present", salary: 45000, experience: 6 },
+    { id: 105, name: "Divya", status: "Absent", salary: 32000, experience: 1 }
+];
+
+// Function: View All Employees
+function viewEmployees() {
+    console.log("\n--- Employee List ---");
+    for (let emp of employees) {
+        console.log(`${emp.id} | ${emp.name} | ${emp.status}`);
+    }
+}
+
+// Function: Search Employee by ID
+function searchEmployee(id) {
+    let emp = employees.find(e => e.id === id);
+
+    if (emp) {
+        console.log(`\nFound: ${emp.name}, Salary: ${emp.salary}`);
+    } else {
+        console.log("\nEmployee Not Found");
+    }
+}
+
+// Function: Add Employee
+function addEmployee(id, name, status, salary, experience) {
+    employees.push({ id, name, status, salary, experience });
+    console.log("\nEmployee Added Successfully");
+}
+
+// Function: Delete Employee
+function deleteEmployee(id) {
+    employees = employees.filter(emp => emp.id !== id);
+    console.log("\nEmployee Deleted Successfully");
+}
+
+// Function: Salary with Bonus
+function calculateSalary(id) {
+    let emp = employees.find(e => e.id === id);
+
+    if (emp) {
+        let bonus = 0;
+
+        if (emp.experience >= 5) {
+            bonus = emp.salary * 0.20;
+        } else if (emp.experience >= 3) {
+            bonus = emp.salary * 0.10;
+        } else {
+            bonus = emp.salary * 0.05;
+        }
+
+        let totalSalary = emp.salary + bonus;
+
+        console.log(`\nEmployee: ${emp.name}`);
+        console.log(`Base Salary: ${emp.salary}`);
+        console.log(`Bonus: ${bonus}`);
+        console.log(`Total Salary: ${totalSalary}`);
+    } else {
+        console.log("\nEmployee Not Found");
+    }
+}
+
+// Function: Experience Level Check (switch)
+function checkExperienceLevel(id) {
+    let emp = employees.find(e => e.id === id);
+
+    if (!emp) {
+        console.log("\nEmployee Not Found");
+        return;
+    }
+
+    let level;
+
+    switch (true) {
+        case emp.experience >= 5:
+            level = "Senior";
+            break;
+        case emp.experience >= 3:
+            level = "Mid-Level";
+            break;
+        default:
+            level = "Junior";
+    }
+
+    console.log(`\n${emp.name} is a ${level} Employee`);
+}
+
+// ===================== DEMO =====================
+
+// View
+viewEmployees();
+
+// Search
+searchEmployee(103);
+
+// Add Employee
+addEmployee(106, "Vijay", "Present", 38000, 4);
+
+// Delete Employee
+deleteEmployee(102);
+
+// Salary Calculation
+calculateSalary(104);
+
+// Experience Check
+checkExperienceLevel(105);
+</script>
+
+</body>
