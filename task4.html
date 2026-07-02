@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="lang"></html>
+<head>
+    <title> Welcome to java Script</title>
+</head>
+<body>
+    <script>
+/*1.// Function
+function welcome() {
+    console.log("Welcome to Stackly IT");
+}
+
+// Function Call
+welcome();
+
+function one(){
+    console.log("hello evryone")
+}
+one();  */
+2./*
+function Employedetails(name,dpt,age){
+    console.log("name"+ name )
+    console.log("dpt"+ dpt )  
+    console.log("age"+ age )             
+}
+
+Employedetails("  pradeep"," mech", 22);
+Employedetails(" hari"," civil", 23)   */
+3./*
+function Salary(salary,bonus){
+
+    let totalsalary = salary+bonus ;
+
+    console.log("totalsalary: " + totalsalary);
+}
+Salary(10000,3000);    */
+4./*
+function resultcheck(marks){
+    if(marks>=35){
+        console.log("pass");
+    }
+        else{
+        console.log("fail");
+    }
+}
+resultcheck(50);    */
+5./*
+function getName(){
+    return "Naveen";
+}
+    let Name=getName();
+
+    console.log(Name);   */
+
+ 6./* - Product Price
+
+
+function getPrice() {
+    return 25000;
+}
+
+let price = getPrice();
+let gst = price * 0.18;
+let finalPrice = price + gst;
+
+console.log("Price :", price);
+console.log("GST :", gst);
+console.log("Final Price :", finalPrice);  */
+
+7./*
+
+function demo() {
+
+    if (true) {
+
+        var a = 10;
+        let b = 20;
+        const c = 30;
+
+    }
+
+    console.log(a);
+
+    // console.log(b); // Error
+    // console.log(c); // Error
+}
+
+demo();    */
+
+
+8./*
+
+console.log(a);
+
+var a = 100;
+
+*/
+
+9./*
+function greet() {
+    console.log("Good Morning");
+}
+
+greet();   */
+
+
+10./*
+
+let employee = function () {
+    console.log("Welcome Employee");
+};
+
+employee();
+
+/*
+
+11./*
+
+const training = () => {
+    console.log("JavaScript Training");
+};
+
+training();
+*/
+
+12./*
+
+function company() {
+    return "Stackly";
+}
+
+let companyName = company();
+
+console.log("Welcome " + companyName);
+
+/
+13./*
+
+function dashboard() {
+    console.log("Dashboard Loaded");
+}
+
+function login(callback) {
+    console.log("Login Successful");
+    callback();
+}
+
+login(dashboard);
+
+/*
+
+14./*
+
+function delivered() {
+    console.log("Delivered");
+}
+
+function preparingFood(callback) {
+    console.log("Preparing Food");
+    callback();
+}
+
+function orderReceived(callback) {
+    console.log("Order Received");
+    callback(delivered);
+}
+
+orderReceived(preparingFood);
+
+
+/*
+15./*
+
+function* coupons() {
+    yield "10% Discount";
+    yield "20% Discount";
+    yield "30% Discount";
+    yield "Better Luck Next Time";
+}
+
+let coupon = coupons();
+
+console.log(coupon.next().value);
+console.log(coupon.next().value);
+console.log(coupon.next().value);
+console.log(coupon.next().value);
+*/
+
+16./*
+
+function* fruits() {
+    yield "Apple";
+    yield "Orange";
+    yield "Banana";
+}
+
+let fruit = fruits();
+
+console.log(fruit.next().value);
+console.log(fruit.next().value);
+console.log(fruit.next().value);
+ /*
+17./*
+
+function discount(price) {
+    return function (percent) {
+        let finalPrice = price - (price * percent / 100);
+        console.log("Final Price :", finalPrice);
+    };
+}
+
+discount(1000)(10);
+       /*
+
+    18./*
+
+function salary(basic) {
+    return function (bonus) {
+        return function (allowance) {
+            console.log("Total Salary :", basic + bonus + allowance);
+        };
+    };
+}
+
+salary(30000)(5000)(2000);
+   /*
+
+
+function loadDashboard() {
+    console.log("Load Dashboard");
+}
+
+function loginSuccess(callback) {
+    console.log("Login Successful");
+    callback();
+}
+
+function verifyPassword(callback) {
+    console.log("Verify Password");
+    callback(loadDashboard);
+}
+
+function enterUsername(callback) {
+    console.log("Enter Username");
+    callback(loginSuccess);
+}
+
+enterUsername(verifyPassword);  
+
+
+
+</script>
+</body>
