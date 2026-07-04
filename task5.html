@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions Assignment</title>
+</head>
+<body>
+
+<h1>JavaScript Assignment</h1>
+<p>Check the output while entering into console</p>
+
+<script>
+
+// ==========================================
+// 1. Employee Login (Scope)
+// ==========================================
+
+console.log("========== 1. Employee Login ==========");
+
+function employeeLogin() {
+    if (true) {
+        var companyName = "Stackly IT";
+        let employeeId = 101;
+        const password = "abc123";
+
+        console.log(companyName);
+        console.log(employeeId);
+        console.log(password);
+    }
+
+    console.log(companyName);
+
+    try {
+        console.log(employeeId);
+    } catch (error) {
+        console.log(error.message);
+    }
+
+    try {
+        console.log(password);
+    } catch (error) {
+        console.log(error.message);
+    }
+}
+
+employeeLogin();
+
+
+// ==========================================
+// 2. ATM Machine (Hoisting)
+// ==========================================
+
+console.log("\n========== 2. ATM Machine ==========");
+
+console.log(accountBalance);
+var accountBalance = 5000;
+
+try {
+    console.log(amount);
+} catch (error) {
+    console.log(error.message);
+}
+let amount = 1000;
+
+try {
+    console.log(pin);
+} catch (error) {
+    console.log(error.message);
+}
+const pin = 1234;
+
+
+// ==========================================
+// 3. Food Delivery App (Named Function)
+// ==========================================
+
+console.log("\n========== 3. Food Delivery ==========");
+
+function orderFood(foodName) {
+    console.log("Order Placed :", foodName);
+}
+
+orderFood("Chicken Biryani");
+
+
+// ==========================================
+// 4. WhatsApp Status (Anonymous Function)
+// ==========================================
+
+console.log("\n========== 4. WhatsApp Status ==========");
+
+const updateStatus = function(status) {
+    console.log("Status Updated :", status);
+};
+
+updateStatus("Busy in Meeting");
+
+
+// ==========================================
+// 5. Weather App (Arrow Function)
+// ==========================================
+
+console.log("\n========== 5. Weather App ==========");
+
+const weather = (city, temperature) => {
+    console.log(`${city} Temperature is ${temperature}°C`);
+};
+
+weather("Chennai", 36);
+
+
+// ==========================================
+// 6. Flipkart Offer (IIFE)
+// ==========================================
+
+console.log("\n========== 6. Flipkart Offer ==========");
+
+(function() {
+    console.log("Today's Offer");
+    console.log("Flat 60% Discount");
+})();
+
+
+// ==========================================
+// 7. Online Payment (Callback)
+// ==========================================
+
+console.log("\n========== 7. Online Payment ==========");
+
+function paymentSuccess() {
+    console.log("Payment Successful");
+}
+
+function makePayment(callback) {
+    console.log("Payment Processing...");
+    callback();
+}
+
+makePayment(paymentSuccess);
+
+
+// ==========================================
+// 8. YouTube Playlist (Generator)
+// ==========================================
+
+console.log("\n========== 8. YouTube Playlist ==========");
+
+function* playlist() {
+    yield "Video 1";
+    yield "Video 2";
+    yield "Video 3";
+    yield "Video 4";
+    return "Playlist Completed";
+}
+
+const play = playlist();
+
+console.log(play.next().value);
+console.log(play.next().value);
+console.log(play.next().value);
+console.log(play.next().value);
+console.log(play.next().value);
+
+
+// ==========================================
+// 9. Student Result (Return)
+// ==========================================
+
+console.log("\n========== 9. Student Result ==========");
+
+function calculateTotal() {
+    return 485;
+}
+
+let totalMarks = calculateTotal();
+
+console.log("Total Marks :", totalMarks);
+
+
+// ==========================================
+// 10. Shopping Cart
+// ==========================================
+
+console.log("\n========== 10. Shopping Cart ==========");
+
+function cartTotal(price1, price2, price3) {
+    return price1 + price2 + price3;
+}
+
+console.log("Total Amount :", cartTotal(500, 300, 200));
+
+
+// ==========================================
+// 11. Salary Calculator
+// ==========================================
+
+console.log("\n========== 11. Salary Calculator ==========");
+
+function salary(basic, hra, bonus) {
+    return basic + hra + bonus;
+}
+
+console.log("Total Salary :", salary(40000, 10000, 8000));
+
+
+// ==========================================
+// 12. Food Bill (Currying)
+// ==========================================
+
+console.log("\n========== 12. Food Bill ==========");
+
+function foodBill(food) {
+    return function(drinks) {
+        return function(dessert) {
+            return food + drinks + dessert;
+        };
+    };
+}
+
+console.log(foodBill(200)(100)(80));
+
+
+// ==========================================
+// 13. Coupon Generator
+// ==========================================
+
+console.log("\n========== 13. Coupon Generator ==========");
+
+function* couponGenerator() {
+    yield "WELCOME10";
+    yield "SAVE20";
+    yield "SUPER30";
+    yield "MEGA50";
+    return "No More Coupons";
+}
+
+const coupon = couponGenerator();
+
+console.log(coupon.next().value);
+console.log(coupon.next().value);
+console.log(coupon.next().value);
+console.log(coupon.next().value);
+console.log(coupon.next().value);
+
+
+// ==========================================
+// 14. Bank Transaction
+// ==========================================
+
+console.log("\n========== 14. Bank Transaction ==========");
+
+function transactionSuccess() {
+    console.log("Transaction Successful");
+}
+
+function withdraw(callback) {
+    console.log("Processing...");
+    callback();
+}
+
+withdraw(transactionSuccess);
+
+
+// ==========================================
+// 15. Employee Profile (Scope)
+// ==========================================
+
+console.log("\n========== 15. Employee Profile ==========");
+
+function employeeProfile() {
+
+    if (true) {
+        var company = "Stackly";
+        let designation = "MERN Developer";
+        const salary = 50000;
+    }
+
+    console.log(company);
+
+    try {
+        console.log(designation);
+    } catch (error) {
+        console.log(error.message);
+    }
+
+    try {
+        console.log(salary);
+    } catch (error) {
+        console.log(error.message);
+    }
+}
+
+employeeProfile();
+
+</script>
+
+</body>
+</html>
