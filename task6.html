@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions Assignment</title>
+</head>
+<body>
+    <script>
+    // ==========================
+// Task 1 - Employee Bonus (Spread Operator)
+// ==========================
+let employee = {
+    name: "Naveen",
+    salary: 35000
+};
+
+let newEmployee = {
+    ...employee,
+    bonus: 5000,
+    department: "Developer"
+};
+
+console.log(newEmployee);
+
+
+// ==========================
+// Task 2 - Shopping Cart (Rest Operator)
+// ==========================
+function calculateBill(...prices) {
+    let total = prices.reduce((sum, price) => sum + price, 0);
+
+    console.log("Items :", prices.length);
+    console.log("Total :", total);
+}
+
+calculateBill(10, 20, 30, 40);
+
+
+// ==========================
+// Task 3 - Student Details (Object Destructuring)
+// ==========================
+let student = {
+    name: "Rahul",
+    age: 22,
+    course: "MERN",
+    city: "Chennai"
+};
+
+let { name, age, course, city } = student;
+
+console.log(name);
+console.log(age);
+console.log(course);
+console.log(city);
+
+
+// ==========================
+// Task 4 - Online Food Order
+// ==========================
+let foods = [
+    "Pizza",
+    "Burger",
+    "Fries"
+];
+
+foods.push("Coke", "Ice Cream");
+foods.splice(2, 1);
+
+console.log(foods);
+
+
+// ==========================
+// Task 5 - Bank Transactions
+// ==========================
+let transactions = [1000, 2000, 3000, 4000];
+
+transactions.shift();
+transactions.unshift(500);
+
+console.log(transactions);
+
+
+// ==========================
+// Task 6 - Company Departments
+// ==========================
+let dept1 = ["HR", "Sales"];
+let dept2 = ["Developer", "Testing"];
+
+let departments = dept1.concat(dept2);
+
+console.log(departments);
+
+
+// ==========================
+// Task 7 - Product Search
+// ==========================
+let products = [
+    "Laptop",
+    "Mouse",
+    "Keyboard",
+    "Monitor"
+];
+
+console.log(products.includes("Keyboard") ? "Available" : "Not Available");
+
+
+// ==========================
+// Task 8 - User Login (Callback Function)
+// ==========================
+function dashboard() {
+    console.log("Dashboard Opened");
+}
+
+function login(callback) {
+    console.log("Login Success");
+    callback();
+}
+
+login(dashboard);
+
+
+// ==========================
+// Task 9 - Coupon Generator (Generator Function)
+// ==========================
+function* coupons() {
+    yield "WELCOME10";
+    yield "SAVE20";
+    yield "MEGA50";
+    yield "FREE100";
+}
+
+let coupon = coupons();
+
+console.log(coupon.next().value);
+console.log(coupon.next().value);
+console.log(coupon.next().value);
+console.log(coupon.next().value);
+
+
+// ==========================
+// Task 10 - Course Registration (Currying)
+// ==========================
+function Course(courseName) {
+    return function(batch) {
+        return function(room) {
+            console.log("Course :", courseName);
+            console.log("Batch :", batch);
+            console.log("Room :", room);
+        };
+    };
+}
+
+Course("JavaScript")("Morning")("Batch-36");
+
+
+// ==========================
+// Task 11 - Movie Collection
+// ==========================
+let movies = [
+    "Leo",
+    "GOAT",
+    "Dragon",
+    "Retro",
+    "Coolie"
+];
+
+console.log(movies.slice(2, 4));
+
+
+// ==========================
+// Task 12 - Employee IDs
+// ==========================
+let ids = [101, 102, 103, 104, 105];
+
+ids.splice(2, 2, 501, 502);
+
+console.log(ids);
+
+
+// ==========================
+// Task 13 - Sort Product Prices
+// ==========================
+let price = [
+    5000,
+    250,
+    700,
+    12000,
+    50
+];
+
+price.sort((a, b) => a - b);
+
+console.log(price);
+
+
+// ==========================
+// Task 14 - Nested Categories
+// ==========================
+let data = [
+    "Electronics",
+    [
+        "Mobiles",
+        [
+            "Samsung",
+            "Apple"
+        ]
+    ]
+];
+
+let [category, [subCategory, [brand1, brand2]]] = data;
+
+console.log(category);
+console.log(subCategory);
+console.log(brand1);
+console.log(brand2);
+
+
+// ==========================
+// Task 15 - Company Team
+// ==========================
+let developers = [
+    "John",
+    "David"
+];
+
+let designers = [
+    "Ram",
+    "Kiran"
+];
+
+let team = [...developers, ...designers];
+
+console.log(team);
+
+
+// ==========================
+// Task 16 - Return Function
+// ==========================
+function calculateSalary(salary, bonus) {
+    return salary + bonus;
+}
+
+let totalSalary = calculateSalary(35000, 5000);
+
+console.log(totalSalary);
+
+
+// ==========================
+// Task 17 - Scope Checking
+// ==========================
+if (true) {
+    var a = 10;
+    let b = 20;
+    const c = 30;
+}
+
+console.log(a); // Works
+
+// console.log(b); // Error
+// console.log(c); // Error
+
+/*
+Explanation:
+var   -> Accessible outside the block.
+let   -> Block scoped (ReferenceError).
+const -> Block scoped (ReferenceError).
+*/
+
+
+// ==========================
+// Task 18 - Customer Orders
+// ==========================
+let orders = [
+    "Pizza",
+    "Burger",
+    "Pizza",
+    "Sandwich",
+    "Pizza"
+];
+
+console.log("First Index :", orders.indexOf("Pizza"));
+console.log("Last Index :", orders.lastIndexOf("Pizza"));
+
+
+// ==========================
+// Task 19 - Flatten Product Categories
+// ==========================
+let items = [
+    1,
+    2,
+    [
+        3,
+        4,
+        [
+            5,
+            6
+        ]
+    ]
+];
+
+console.log(items.flat(2));
+
+
+// ==========================
+// Task 20 - Mini Shopping Cart Challenge
+// ==========================
+let cart = ["Mouse", "Keyboard"];
+
+cart.push("Monitor");
+cart.unshift("Laptop");
+cart.splice(cart.indexOf("Keyboard"), 1);
+
+console.log(cart.includes("Mouse") ? "Mouse Exists" : "Mouse Not Found");
+
+let accessories = ["Speaker", "Webcam"];
+
+let finalCart = [...cart, ...accessories];
+
+console.log(finalCart);
+
+
+</script>
+
+</body>
+</html>
