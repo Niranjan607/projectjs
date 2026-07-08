@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions Assignment</title>
+</head>
+<body>
+    <script>
+   /*Task 1:  // Employee Data
+const employees = [
+    { id: 1, name: "Rahul", salary: 45000 },
+    { id: 2, name: "Anjali", salary: 60000 },
+    { id: 3, name: "Kiran", salary: 120000 },
+    { id: 4, name: "Sneha", salary: 80000 },
+    { id: 5, name: "Arun", salary: 35000 }
+];
+
+// Display employee names using map()
+const employeeNames = employees.map(emp => emp.name);
+console.log("Employee Names:", employeeNames);
+
+// Employees with salary > 50000
+const highSalaryEmployees = employees.filter(emp => emp.salary > 50000);
+console.log("Salary > ₹50,000:", highSalaryEmployees);
+
+// First employee with salary > 100000
+const firstHighSalary = employees.find(emp => emp.salary > 100000);
+console.log("First Salary > ₹1,00,000:", firstHighSalary);
+
+// Total salary expense
+const totalSalary = employees.reduce((sum, emp) => sum + emp.salary, 0);
+console.log("Total Salary Expense: ₹", totalSalary);
+                                       */
+  /* task2                                    // Product Arrays
+const cart1 = ["Laptop", "Mouse"];
+const cart2 = ["Keyboard", "Headphones"];
+
+// Merge arrays
+const mergedCart = [...cart1, ...cart2];
+console.log("Merged Cart:", mergedCart);
+
+// Add new product without changing original array
+const updatedCart = [...mergedCart, "Monitor"];
+console.log("Updated Cart:", updatedCart);
+console.log("Original Cart:", mergedCart);
+
+// Rest Operator
+function checkout(...products) {
+    console.log("Products:", products);
+    console.log("Total Products:", products.length);
+}
+
+checkout("Laptop", "Mouse", "Keyboard", "Monitor");
+                          */
+    /*               
+    Task3:     // Student Object
+const student = {
+    name: "Priya",
+    department: "Computer Science",
+    marks: [85, 90, 88, 95, 80]
+};
+
+// Object Destructuring
+const { name, department, marks } = student;
+
+// Array Destructuring
+const [subject1, subject2, subject3] = marks;
+
+const totalMarks = marks.reduce((sum, mark) => sum + mark, 0);
+const averageMarks = totalMarks / marks.length;
+
+console.log("Student Name:", name);
+console.log("Department:", department);
+console.log("First Three Subject Marks:", subject1, subject2, subject3);
+console.log("Total Marks:", totalMarks);
+console.log("Average Marks:", averageMarks);
+                      */
+ /*   Task 4:
+                      const product = "Wireless Bluetooth Headphones";
+let searchText = "   Bluetooth   ";
+
+// Remove extra spaces
+searchText = searchText.trim();
+
+// Convert to lowercase
+const searchKeyword = searchText.toLowerCase();
+const productLower = product.toLowerCase();
+
+// Check if keyword exists
+console.log("Product Found:", productLower.includes(searchKeyword));
+
+// Highlight searched word
+const highlighted = product.replace(
+    new RegExp(searchText, "i"),
+    `**${searchText}**`
+);
+
+console.log("Highlighted Product:", highlighted);
+                    */
+
+// Movie List
+let movies = ["Leo", "Jailer", "Master", "Vikram"];
+
+console.log("Original Movies:", movies);
+
+// Add new movies
+movies.push("Kaithi");
+movies.push("Beast");
+console.log("After Push:", movies);
+
+// Remove last movie
+movies.pop();
+console.log("After Pop:", movies);
+
+// Remove first movie
+movies.shift();
+console.log("After Shift:", movies);
+
+// Add featured movie at beginning
+movies.unshift("Thug Life");
+console.log("After Unshift:", movies);
+
+// Replace one movie
+movies.splice(2, 1, "Coolie");
+console.log("After Splice:", movies);
+
+// Movie ratings
+let ratings = [4.5, 3.8, 4.9, 4.2, 5.0];
+
+ratings.sort((a, b) => b - a);
+console.log("Ratings (Descending):", ratings);
+
+// Check if movie exists
+console.log("Contains Vikram?", movies.includes("Vikram"));
+console.log("Contains Leo?", movies.includes("Leo"));
+
+</script>
+
+</body>
+</html>
